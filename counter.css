@@ -1,0 +1,16 @@
+:root { color-scheme: light; font: 16px "Arial", sans-serif; color:#14271f; background:#e9e6d8; }
+* { box-sizing:border-box }
+main { max-width:760px; padding:24px 32px; margin:auto }
+header { border-top:10px solid #ab421a; border-bottom:1px solid; padding:14px 0 }
+h1 { font: bold clamp(2rem,6vw,3.3rem)/.98 Georgia,serif; margin:0; letter-spacing:-.045em }
+form { padding:22px 0; border-bottom:2px solid }
+label { display:block; margin-bottom:7px; font-weight:bold }
+.filing,li { display:flex; gap:8px; align-items:center }
+input { min-width:0; flex:1; font:inherit; background:#fffcf0; padding:11px; border:1px solid }
+button { cursor:pointer; background:#183d2c; color:#fffcf0; border:0; padding:12px; font:inherit }
+button:disabled { opacity:.5 }
+ul { padding:0; list-style:none }
+li { padding:9px 0; border-bottom:1px solid #a49f8b }
+li span { flex:1; overflow-wrap:anywhere }
+li button { padding:7px 10px }
+#receipt p { border-left:4px solid #ab421a; padding-left:12px }

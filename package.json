@@ -1,0 +1,22 @@
+{
+  "name": "mullet-electron-todo",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "python3 -m unittest discover -s tests && python3 scripts/quota.py",
+    "test:window": "electron . --inspect-the-counter"
+  },
+  "dependencies": {
+    "wabt": "1.0.39"
+  },
+  "devDependencies": {
+    "electron": "45.3.4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/russell-dot-js/mullet-electron-todo.git"
+  }
+}

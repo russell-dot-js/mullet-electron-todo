@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; connect-src 'none'">
+<title>Department of Unfinished Parking</title><link rel="stylesheet" href="counter.css"></head>
+<body><main><header><h1>Department of<br>Unfinished Parking</h1></header>
+<form><label for="title">What needs doing?</label><div class="filing"><input id="title" maxlength="200" required autocomplete="off"><button id="file">Park task</button></div></form>
+<section aria-label="Task register"><ul id="bays"></ul></section>
+<p id="status" role="status"></p><section id="receipt" aria-live="polite"></section>
+</main><script src="counter.js"></script></body></html>

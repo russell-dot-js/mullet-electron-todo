@@ -1,0 +1,30 @@
+name: Electron parking inspector
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hearing:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm test
+      - name: Park and tow a task at the Electron window
+        env:
+          MULLET_SCREENSHOT: ${{ runner.temp }}/electron-todo.png
+        run: xvfb-run -a npm run test:window -- --no-sandbox
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: electron-todo-preview
+          path: ${{ runner.temp }}/electron-todo.png
+          if-no-files-found: error
